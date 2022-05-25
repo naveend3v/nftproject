@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NFT preview card component</title>
+    
+    <link rel="icon" type="image/x-icon" href="/nft-preview-card-component-main/nft-preview-card-component-main/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+    <style>
+        html {
+            font-family:Outfit;
+            background-color: hsl(217, 54%, 11%);
+            box-sizing: border-box;
+        }
+        .block1 {
+            max-width: 350px;  
+            background-color: hsl(216, 50%, 16%);  
+            padding: 25px;
+            margin: auto;
+            border-radius: 3%;
+            position: relative;
+            box-shadow: 0px 15px 20px 10px hsl(215, 58%, 10%), 0px 15px 15px 30px hsl(215, 32%, 27%, 10%);
+        }
+        .nft-image {
+            width: 100%;
+            height: auto;
+            border-radius: 3%;
+            text-align: center;   
+        }
+        .nft-image:hover {
+            background-color: hsl(178, 100%, 50%);
+            
+        }
+        hr {
+            height: 1px;
+            background-color: hsl(215, 32%, 27%);
+            border:none;
+        }
+        .avatar {
+            border: 1px solid white;
+            border-radius: 50%;
+            max-width: 10%;
+            height: auto;
+            float: left;
+            margin-right: 10%;
+        }
+        .block2 {
+            color: hsl(0, 0%, 100%);
+            font-weight: 600;
+        }
+        .block3, .p3, .block5 {
+            color: hsl(215, 51%, 70%);
+            font-weight: 300;
+        }
+        .p2 {
+            color: hsl(178, 100%, 50%);
+            font-weight: 400;
+        }
+        .block4 {
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .abc {
+            display:flex;
+
+            justify-content: flex-start;
+        }
+        .ethereum, .clock {
+            margin-right: 15px;
+        }
+        .block5 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        @media screen and (max-width:375px) {
+            .block1 {
+                margin: 10% auto;
+            }
+        }
+        @media screen and (max-width:1440px) {
+            .block1 {
+                margin: 15% auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="block1">
+        <img class="nft-image"src="./images/image-equilibrium.jpg" alt="Ethereum icon">
+        <div class="block2">
+            <p class="h1">Equilibrium #3429</p>
+        </div>
+        <div class="block3">
+            <p class="p1">Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+        <div class="block4">   
+            <div class="abc">
+                <img class="ethereum" src="./images/icon-ethereum.svg"/>
+                <span class="p2"> 0.041 ETH</span>
+            </div>
+            <div class="abc">
+                <img class="clock" src="./images/icon-clock.svg"/>
+                <span class="p3">3 days left</span>
+            </div>
+        </div>  
+        <hr>
+        <div class="block5">
+            <img class="avatar" src="./images/image-avatar.png"/>
+            <p>Creation of <span style="color:white;"> Jules Wyvern</span></p>
+        </div>        
+    </div>
+</body>
+</html>
