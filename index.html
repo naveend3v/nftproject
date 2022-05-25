@@ -20,16 +20,6 @@
             position: relative;
             box-shadow: 0px 15px 20px 10px hsl(215, 58%, 10%), 0px 15px 15px 30px hsl(215, 32%, 27%, 10%);
         }
-        .nft-image {
-            width: 100%;
-            height: auto;
-            border-radius: 3%;
-            text-align: center;   
-        }
-        .nft-image:hover {
-            background-color: hsl(178, 100%, 50%);
-            
-        }
         hr {
             height: 1px;
             background-color: hsl(215, 32%, 27%);
@@ -60,11 +50,9 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-
         }
         .abc {
             display:flex;
-
             justify-content: flex-start;
         }
         .ethereum, .clock {
@@ -85,11 +73,58 @@
                 margin: 15% auto;
             }
         }
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+        .nft-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 3%; 
+            opacity: 1;
+            backface-visibility: hidden;             
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color:hsla(178, 100%, 50%, 50%); 
+            border-radius: 3%; 
+            opacity: 0;
+        }
+        .overlay-image {  
+            display: flex;
+            justify-content: center;
+            margin-top: 50%;
+        }
+        
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+        .h1:hover {
+            color: hsl(178, 100%, 50%);
+        }
+        .h2 {
+            color: white;
+        }
+        .h2:hover {
+            color: hsl(178, 100%, 50%);
+        }
     </style>
 </head>
 <body>
     <div class="block1">
-        <img class="nft-image"src="./images/image-equilibrium.jpg" alt="Ethereum icon">
+        <div class="image-container">
+            <img class="nft-image"src="./images/image-equilibrium.jpg" alt="Ethereum icon">
+            <div class="overlay">
+                <div class="overlay-image"><img src="./images/icon-view.svg"></div>
+            </div>
+        </div>        
         <div class="block2">
             <p class="h1">Equilibrium #3429</p>
         </div>
@@ -109,7 +144,7 @@
         <hr>
         <div class="block5">
             <img class="avatar" src="./images/image-avatar.png"/>
-            <p>Creation of <span style="color:white;"> Jules Wyvern</span></p>
+            <p>Creation of  &#160;<p class="h2"> Jules Wyvern</p></p>
         </div>        
     </div>
 </body>
